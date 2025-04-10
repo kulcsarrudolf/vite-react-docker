@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useApi } from './api/useApi';
+import config from './../config';
 
 interface Post {
   id: number;
@@ -17,8 +18,8 @@ function App() {
   return (
     <div style={{ padding: '2rem' }}>
       <h1>📡 useAxios Example</h1>
-      <h2>Environment: {import.meta.env.VITE_ENVIRONMENT}</h2>
-      <h2>API URL: {import.meta.env.VITE_API_URL}</h2>
+      <h2>Environment: {config.environment}</h2>
+      <h2>API URL: {config.apiUrl}</h2>
 
       <hr />
 
