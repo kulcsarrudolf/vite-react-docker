@@ -1,0 +1,35 @@
+{
+  "name": "vite-react-ts-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "build:staging": "vite build --mode staging",
+    "build:prod": "vite build --mode production",
+    "serve:dev": "vite preview --port 5001",
+    "serve:staging": "vite preview --port 5002",
+    "serve:prod": "vite preview --port 5003",
+    "docker:build:dev": "docker build --build-arg BUILD_ENV=development -t vite-app-dev .",
+    "docker:build:staging": "docker build --build-arg BUILD_ENV=staging -t vite-app-staging .",
+    "docker:build:prod": "docker build --build-arg BUILD_ENV=production -t vite-app-prod .",
+    "docker:run:dev": "docker run -p 3001:80 vite-app-dev",
+    "docker:run:staging": "docker run -p 3002:80 vite-app-staging",
+    "docker:run:prod": "docker run -p 3000:80 vite-app-prod"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  }
+}
